@@ -74,6 +74,7 @@ $posts = $stmt->fetchAll();
                     <td><?= htmlspecialchars(substr($post["content"], 0, 50)) ?>...</td>
                     <td><?= $post["created_at"] ?></td>
                     <td class="action-btns">
+                        <a href="view.php?id=<?= $post['id']; ?>" class=" btn-view">View</a>
                         <a href="edit.php?id=<?= $post["id"] ?>" class="edit-btn">Edit</a>
                         <a href="delete.php?id=<?= $post["id"] ?>" class="delete-btn">Delete</a>
                     </td>
